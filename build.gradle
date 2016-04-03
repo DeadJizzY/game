@@ -1,0 +1,21 @@
+group 'itsjavadead'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+    ivy {
+        url "http://www.tcpr.ca/files/"
+        layout 'pattern', {
+            artifact '[module]/[module]-[revision].[ext]'
+        }
+    }
+}
+
+dependencies {
+    compile 'org.spigotmc.1.9.2:spigot:1.9.2-R0.1-SNAPSHOT-latest:1.9.2'
+}
